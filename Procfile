@@ -1,0 +1,1 @@
+web: gunicorn ducengram.wsgi --log-file -

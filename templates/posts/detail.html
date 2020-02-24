@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block head_content %}
+    <title>Ducengram</title>
+{% endblock%}
+<!DOCTYPE html>
+{% block container %}
+
+    <div class="container">
+        <div class="row">
+            {% csrf_token %}
+            <input type="hidden" id="user" value="{{request.user}}">
+            {% include "posts/post_card.html" %}
+        </div>
+    </div>
+
+{% endblock %}
